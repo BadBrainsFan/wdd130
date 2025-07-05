@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Full Name | WDD 130</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Customizing Tailwind's default colors if needed, or defining new ones */
+        :root {
+            --color-cream: #F5F5DC; /* A light cream color */
+            --color-turquoise: #40E0D0; /* A vibrant turquoise */
+            --color-gold: #FFD700; /* A standard gold color */
+        }
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
+            background-color: var(--color-cream); /* Cream background for the body */
+        }
+        /* Styling for the navigation links to add gold trim effect on hover */
+        nav a {
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+            padding: 0.5rem 1rem; /* Padding for better click/tap area */
+            border-radius: 0.5rem; /* Rounded corners for links */
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slight background on hover */
+            color: var(--color-gold); /* Gold text on hover */
+            box-shadow: 0 0 10px var(--color-gold); /* Subtle gold glow */
+        }
+        /* General rounded corners for elements */
+        .rounded-lg {
+            border-radius: 0.75rem; /* More pronounced rounded corners */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header Section: Turquoise background with gold trim/text -->
+    <header class="bg-teal-600 text-white p-4 shadow-lg rounded-b-lg border-b-4 border-amber-400">
+        <nav class="container mx-auto flex justify-center space-x-8">
+            <a href="#" class="text-white hover:text-amber-400 font-semibold text-lg">Home</a>
+            <a href="wwr/" class="text-white hover:text-amber-400 font-semibold text-lg">Rafting Website</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section: Cream background -->
+    <main class="container mx-auto my-8 p-8 bg-stone-100 shadow-xl rounded-lg flex-grow border-4 border-amber-400">
+        <h1 class="text-4xl font-bold text-teal-800 mb-6 text-center">Christopher Leader | WDD 130</h1>
+        
+        <!-- Profile Image - Placeholder used, replace src with your actual image path -->
+        <div class="flex justify-center mb-6">
+            <img src="images/profile.jpg"
+                 alt="CHRISTOPHER LEADER IN BARRA DA TIJUCA, BRAZIL" 
+                 width="200" 
+                 class="rounded-full border-4 border-amber-400 shadow-md">
+        </div>
+        
+        <p class="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+            Hello! My name is Christopher Leader and I am from Reston, Virginia, U.S.A.
+            I am excited to be taking WDD 130 and learn more about web fundamentals.
+            In my free time, I enjoy traveling, reading, hiking, making music, going to museums, and art exhibits.
+            I'm looking forward to building my skills and creating awesome web projects!
+        </p>
+    </main>
+
+    <!-- Footer Section: Turquoise background with gold trim/text -->
+    <footer class="bg-teal-600 text-white p-4 mt-8 shadow-lg rounded-t-lg border-t-4 border-amber-400">
+        <p class="text-center text-lg">
+            &copy;2025 <span class="text-amber-400">✨</span> Christopher Leader <span class="text-amber-400">✨</span> Reston, Virginia, U.S.A.
+        </p>
+    </footer>
+</body>
+</html>
