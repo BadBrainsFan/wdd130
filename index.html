@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Full Name | WDD 130</title>
-    <!-- Tailwind CSS CDN for styling -->
+    <title>Christopher Leader | WDD 130</title>
+    <meta name="description" content="Christopher Leader's WDD 130 home page for web fundamentals course.">
+    <meta name="author" content="Christopher Leader">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Customizing Tailwind's default colors if needed, or defining new ones */
@@ -32,39 +33,85 @@
         .rounded-lg {
             border-radius: 0.75rem; /* More pronounced rounded corners */
         }
+
+        /* --- CSS Enhancements --- */
+        main {
+            width: 720px; /* Limited width for the main content */
+            max-width: 90%; /* Ensure responsiveness on smaller screens */
+        }
+
+        aside {
+            width: 250px; /* Specific width for the aside */
+            margin: 1rem 0 1rem 1rem; /* Margin around the aside */
+            border: 1px solid #a8a8a8; /* Example border color */
+            padding: 15px;
+            background-color: #f0f0f0; /* Light background for contrast */
+            color: #2c2c2c; /* Dark text for readability */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+            border-radius: 0.5rem; /* Slightly rounded corners for the aside */
+        }
+
+        aside img {
+            width: 200px;
+            height: auto; /* Maintains aspect ratio */
+            display: block; /* Ensures image takes its own line */
+            margin: 0 auto 10px; /* Center image and add bottom margin */
+            border-radius: 0.5rem; /* Rounded corners for aside image */
+        }
+
+        main img { /* More exclusive selector for the profile image */
+            width: 150px;
+            height: auto;
+            /* Existing styles: rounded-full border-4 border-amber-400 shadow-md */
+        }
+
+        p {
+            padding: 0; /* Removed padding for paragraphs */
+        }
+
+        footer {
+            margin-top: 1rem; /* Adds space above the footer */
+            border-top: 1px solid #eee; /* Adds a top border for distinction */
+            text-align: center; /* Centers any text within the footer */
+        }
+        /* --- End CSS Enhancements --- */
+
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
-    <!-- Header Section: Turquoise background with gold trim/text -->
-    <header class="bg-teal-600 text-white p-4 shadow-lg rounded-b-lg border-b-4 border-amber-400">
+<body class="min-h-screen flex flex-col items-center">
+    <header class="bg-teal-600 text-white p-4 shadow-lg rounded-b-lg border-b-4 border-amber-400 w-full">
         <nav class="container mx-auto flex justify-center space-x-8">
             <a href="#" class="text-white hover:text-amber-400 font-semibold text-lg">Home</a>
             <a href="wwr/" class="text-white hover:text-amber-400 font-semibold text-lg">Rafting Website</a>
         </nav>
     </header>
 
-    <!-- Main Content Section: Cream background -->
-    <main class="container mx-auto my-8 p-8 bg-stone-100 shadow-xl rounded-lg flex-grow border-4 border-amber-400">
-        <h1 class="text-4xl font-bold text-teal-800 mb-6 text-center">Christopher Leader | WDD 130</h1>
-        
-        <!-- Profile Image - Placeholder used, replace src with your actual image path -->
-        <div class="flex justify-center mb-6">
-            <img src="images/profile.jpg"
-                 alt="CHRISTOPHER LEADER IN BARRA DA TIJUCA, BRAZIL" 
-                 width="200" 
-                 class="rounded-full border-4 border-amber-400 shadow-md">
+    <main class="container mx-auto my-8 p-8 bg-stone-100 shadow-xl rounded-lg flex-grow border-4 border-amber-400 flex flex-col md:flex-row items-start justify-center">
+        <div class="flex-grow">
+            <h1 class="text-4xl font-bold text-teal-800 mb-6 text-center">Christopher Leader | WDD 130</h1>
+            
+            <div class="flex justify-center mb-6">
+                <img src="images/profile.jpg"
+                     alt="CHRISTOPHER LEADER IN BARRA DA TIJUCA, BRAZIL" 
+                     class="rounded-full border-4 border-amber-400 shadow-md">
+            </div>
+            
+            <p class="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+                Hello! My name is Christopher Leader and I am from Reston, Virginia, U.S.A.
+                I am excited to be taking WDD 130 and learn more about web fundamentals.
+                In my free time, I enjoy traveling, reading, hiking, making music, going to museums, and art exhibits.
+                I'm looking forward to building my skills and creating awesome web projects!
+            </p>
         </div>
-        
-        <p class="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            Hello! My name is Christopher Leader and I am from Reston, Virginia, U.S.A.
-            I am excited to be taking WDD 130 and learn more about web fundamentals.
-            In my free time, I enjoy traveling, reading, hiking, making music, going to museums, and art exhibits.
-            I'm looking forward to building my skills and creating awesome web projects!
-        </p>
+
+        <aside class="mt-8 md:mt-0">
+            <h2>Virginia, U.S.A.</h2>
+            <img src="images/Great_Falls_Park_Virginia.jpg" alt="Scenic view of Great Falls Park, Virginia">
+            <p>Virginia is a state in the Mid-Atlantic and Southeastern regions of the United States, between the Atlantic Coast and the Appalachian Mountains. It is known for its historical significance and diverse landscapes. From the historic battlefields to the beautiful beaches, Virginia offers a unique blend of experiences.</p>
+        </aside>
     </main>
 
-    <!-- Footer Section: Turquoise background with gold trim/text -->
-    <footer class="bg-teal-600 text-white p-4 mt-8 shadow-lg rounded-t-lg border-t-4 border-amber-400">
+    <footer class="bg-teal-600 text-white p-4 mt-8 shadow-lg rounded-t-lg border-t-4 border-amber-400 w-full">
         <p class="text-center text-lg">
             &copy;2025 <span class="text-amber-400">✨</span> Christopher Leader <span class="text-amber-400">✨</span> Reston, Virginia, U.S.A.
         </p>
