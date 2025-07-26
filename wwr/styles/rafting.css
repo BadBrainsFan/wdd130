@@ -25,7 +25,7 @@ body {
 
 /* Limit page width and center content */
 header, main, footer {
-    width: 840px;
+    max-width: 840px; /* Use max-width for better responsiveness on smaller screens */
     margin: 0 auto;
 }
 
@@ -34,14 +34,31 @@ header {
     background-color: var(--primary-color);
     color: white;
     padding: 1rem;
-    display: flex;
+    display: grid; /* Changed to CSS Grid */
+    grid-template-columns: auto 1fr auto; /* Logo, then flexible space for H1, then nav */
     align-items: center;
-    justify-content: space-between;
+    gap: 20px; /* Space between grid items */
 }
 
 header img {
     width: 80px; /* Adjust logo size as needed */
     height: auto;
+    grid-column: 1 / 2; /* Place image in the first column */
+}
+
+header h1 {
+    grid-column: 2 / 3; /* Place H1 in the second column */
+    text-align: center;
+    color: white; /* Ensure H1 in header is white for contrast */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header nav {
+    grid-column: 3 / 4; /* Place nav in the third column */
+    display: flex; /* Applied Flexbox to the nav for horizontal links */
+    justify-content: flex-end; /* Align links to the right within the nav grid area */
+    gap: 15px; /* Space between nav links */
 }
 
 header nav a {
@@ -49,6 +66,7 @@ header nav a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent links from wrapping */
 }
 
 header nav a:hover {
@@ -57,14 +75,14 @@ header nav a:hover {
     border-radius: 0.5rem;
 }
 
-/* Heading styling */
-h1, h2 {
+/* Heading styling for main content */
+h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
 /* Basic margin and padding for elements */
-nav, p, section, article {
+p, section, article {
     margin: 16px;
     padding: 8px;
 }
@@ -82,21 +100,10 @@ nav, p, section, article {
     max-height: 400px; /* Limit height to prevent overly tall hero images */
 }
 
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.85; /* Slightly less opaque to see image behind */
-    background-color: var(--accent1-color);
-    color: var(--primary-color); /* Text color for contrast */
-    font-size: 2.5em; /* Larger font size for hero title */
-}
-
 .hero article {
     position: absolute;
-    top: 50%; /* Adjust as needed to position below heading */
+    /* Adjust positioning based on desired wireframe look */
+    top: 50%; /* Position roughly in the middle vertically */
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the article */
     width: 80%; /* Adjust width of the article overlay */
@@ -142,14 +149,34 @@ section p {
     text-align: justify;
 }
 
-/* Adventure Awaits You! images */
-section:last-of-type img { /* Targets images in the last section (Adventure Awaits You!) */
-    width: calc(20% - 10px); /* Approx 5 images per row with spacing */
-    height: auto;
-    margin: 5px;
+/* Adventure Awaits You! images layout */
+.adventure-gallery {
+    display: flex; /* Use Flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center images if they don't fill the row exactly */
+    gap: 15px; /* Space between images and captions */
+    padding: 20px; /* Add some padding around the gallery */
+}
+
+.adventure-gallery figure {
+    flex: 1 1 calc(20% - 15px); /* Allows for roughly 5 items per row with gaps */
+    max-width: calc(20% - 15px); /* Max width for items, considering gap */
+    text-align: center;
+    margin: 0; /* Remove default figure margin */
+}
+
+.adventure-gallery figure img {
+    width: 100%; /* Make images fill their figure container */
+    height: 150px; /* Fixed height for uniformity of images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
     border-radius: 5px;
-    object-fit: cover;
-    display: inline-block; /* Allows images to sit side-by-side */
+    display: block; /* Remove extra space below image */
+    margin-bottom: 5px; /* Space between image and figcaption */
+}
+
+.adventure-gallery figcaption {
+    font-size: 0.9em;
+    color: #555;
 }
 
 /* Footer styling */
@@ -157,16 +184,16 @@ footer {
     background-color: var(--primary-color);
     color: white;
     padding: 1.5rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;
-    gap: 1rem; /* Space between items */
+    display: flex; /* Use flexbox for the footer content */
+    justify-content: space-between; /* Pushes content to ends */
+    align-items: center; /* Vertically align items */
 }
 
 footer p {
     margin: 0; /* Remove default paragraph margin */
     padding: 0;
+    flex-grow: 1; /* Allow copyright text to take available space */
+    text-align: left; /* Align copyright to the left */
 }
 
 .socialmedia {
