@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Splash White Water Rafting</title>
+    <meta name="description" content="Get in touch with Splash White Water Rafting for reservations, general inquiries, or website suggestions. Find our address, phone number, and email.">
+    <meta name="author" content="Christopher Leader">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <img src="images/z-splash.png" alt="Splash White Water Rafting Logo">
+        <h1>Splash White Water Rafting</h1> 
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section with a header and background image -->
+        <div class="hero">
+            <img src="images/hero-rafting.jpg" alt="Rafting adventure on river">
+            <article>
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you!</p>
+            </article>
+        </div>
+
+        <!-- Section for company information and map -->
+        <section class="contact-info">
+            <div class="company-details">
+                <h3>Our Headquarters</h3>
+                <p><strong>Address:</strong> 11657 Chesterfield Court, Unit C, Reston, Virginia 20190</p>
+                <p><strong>Phone:</strong> (646) 704-8104</p>
+                <p><strong>Email:</strong> hitspacetech@gmail.com</p>
+            </div>
+            
+            <!-- Embedded Google Map -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1490.5896350329972!2d-110.87186958444391!3d40.672322521153676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87520e50d6f46141%3A0xc3453b300f2e08a!2sJackson%20Hole%20Whitewater%20Rafting!5e0!3m2!1sen!2sus!4v1714571994685!5m2!1sen!2sus" 
+                    width="600" 
+                    height="450" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="embedded-map"
+                ></iframe>
+            </div>
+        </section>
+
+        <!-- Section for employee profiles -->
+        <section class="employee-profiles">
+            <h2>Our Team</h2>
+            <div class="profile-cards">
+                <figure class="employee-card">
+                    <!-- Placeholder image for the CEO -->
+                    <img src="images/chris_leader.jpg" alt="Portrait of Christopher Leader">
+                    <figcaption>
+                        <h3>Christopher Leader</h3>
+                        <p>CEO & Founder</p>
+                    </figcaption>
+                </figure>
+                <figure class="employee-card">
+                    <!-- Placeholder image for the Overnight Manager -->
+                    <img src="images.com/black_panther.jpg" alt="Portrait of Black Panther">
+                    <figcaption>
+                        <h3>Black Panther</h3>
+                        <p>Overnight Manager</p>
+                    </figcaption>
+                </figure>
+                <figure class="employee-card">
+                    <!-- Placeholder image for the Head Nurse -->
+                    <img src="images/doctor-strange-2016.jpg" alt="Portrait of Dr. Strange">
+                    <figcaption>
+                        <h3>Dr. Strange</h3>
+                        <p>Head Nurse</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section for the contact form -->
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post" class="contact-form">
+                <label for="user-name">Full Name:</label>
+                <input type="text" id="user-name" name="user-name" required>
+        
+                <label for="user-email">Email Address:</label>
+                <input type="email" id="user-email" name="user-email" required>
+        
+                <fieldset>
+                    <legend>Purpose of Message:</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="general-inquiry" name="purpose" value="general" required>
+                        <label for="general-inquiry">General Inquiry</label>
+        
+                        <input type="radio" id="reservation-question" name="purpose" value="reservation">
+                        <label for="reservation-question">Reservation Question</label>
+        
+                        <input type="radio" id="website-suggestion" name="purpose" value="suggestion">
+                        <label for="website-suggestion">Website Suggestion</label>
+                    </div>
+                </fieldset>
+        
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+        
+                <div class="newsletter-group">
+                    <input type="checkbox" id="newsletter-signup" name="newsletter-signup">
+                    <label for="newsletter-signup">Please subscribe me to the monthly newsletter</label>
+                </div>
+        
+                <button type="submit">Send Your Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Splash White Water Rafting | Christopher Leader</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram icon">
+            </a>
+        </nav>
+        <p><a href="wireframe.png" target="_blank">Contact Us Wireframe</a></p>
+    </footer>
+</body>
+</html>
