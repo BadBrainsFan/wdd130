@@ -34,31 +34,31 @@ header {
     background-color: var(--primary-color);
     color: white;
     padding: 1rem;
-    display: grid; /* Changed to CSS Grid */
-    grid-template-columns: auto 1fr auto; /* Logo, then flexible space for H1, then nav */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 20px; /* Space between grid items */
+    gap: 20px;
 }
 
 header img {
-    width: 80px; /* Adjust logo size as needed */
+    width: 80px;
     height: auto;
-    grid-column: 1 / 2; /* Place image in the first column */
+    grid-column: 1 / 2;
 }
 
 header h1 {
-    grid-column: 2 / 3; /* Place H1 in the second column */
+    grid-column: 2 / 3;
     text-align: center;
-    color: white; /* Ensure H1 in header is white for contrast */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 header nav {
-    grid-column: 3 / 4; /* Place nav in the third column */
-    display: flex; /* Applied Flexbox to the nav for horizontal links */
-    justify-content: flex-end; /* Align links to the right within the nav grid area */
-    gap: 15px; /* Space between nav links */
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
 header nav a {
@@ -66,7 +66,7 @@ header nav a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
-    white-space: nowrap; /* Prevent links from wrapping */
+    white-space: nowrap;
 }
 
 header nav a:hover {
@@ -90,93 +90,163 @@ p, section, article {
 /* Hero section styling */
 .hero {
     position: relative;
+    height: 600px; /* Merged height from original CSS for consistency with home page */
+    width: 100%;
 }
 
 .hero img {
     display: block;
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    max-height: 400px; /* Limit height to prevent overly tall hero images */
+    height: 100%; /* Merged height from original CSS */
+    object-fit: cover;
 }
 
-.hero article {
+/* Home Page specific hero message */
+#hero-msg {
     position: absolute;
-    /* Adjust positioning based on desired wireframe look */
-    top: 50%; /* Position roughly in the middle vertically */
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centers the article */
-    width: 80%; /* Adjust width of the article overlay */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    transform: translate(-50%, -50%);
+    color: white; /* Changed to white for better contrast with hero image */
+    text-align: center;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center text within the article */
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    height: auto;
-    margin: 0 0 10px 15px; /* Top, Right, Bottom, Left margin */
-    border-radius: 0.5rem;
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.home-title, .trips-title { /* Added trips-title for consistency */
+    font-family: var(--heading-font);
+    font-size: 3em;
+    margin-top: 0;
 }
 
-.hero article p {
-    text-align: left; /* Align paragraph text to the left within the article */
-    padding: 0; /* Remove extra padding from global p rule */
-    margin: 0; /* Remove extra margin from global p rule */
+.button-box {
+    margin-top: 20px;
 }
 
-/* Section styling */
-section {
-    background-color: white;
-    margin: 20px auto;
+.book {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.book:hover {
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
+}
+
+/* Home Page Grid Layout */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 50px;
+}
+
+.newsletter-grid {
+    background-color: var(--primary-color);
+    color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-section h2 {
+.newsletter-grid h2 {
+    font-family: var(--heading-font);
     text-align: center;
-    margin-bottom: 15px;
 }
 
-section p {
-    line-height: 1.6;
+.newsletter-grid form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter-grid input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.content-grid p {
     text-align: justify;
 }
 
-/* Adventure Awaits You! images layout */
-.adventure-gallery {
-    display: flex; /* Use Flexbox for horizontal layout */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center images if they don't fill the row exactly */
-    gap: 15px; /* Space between images and captions */
-    padding: 20px; /* Add some padding around the gallery */
+.card-img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.adventure-gallery figure {
-    flex: 1 1 calc(20% - 15px); /* Allows for roughly 5 items per row with gaps */
-    max-width: calc(20% - 15px); /* Max width for items, considering gap */
+/* Trips Page Specific Styles */
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 50px;
     text-align: center;
-    margin: 0; /* Remove default figure margin */
 }
 
-.adventure-gallery figure img {
-    width: 100%; /* Make images fill their figure container */
-    height: 150px; /* Fixed height for uniformity of images */
-    object-fit: cover; /* Ensures images cover the area without distortion */
+.trip-card {
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.trip-card img {
+    width: 100%;
     border-radius: 5px;
-    display: block; /* Remove extra space below image */
-    margin-bottom: 5px; /* Space between image and figcaption */
 }
 
-.adventure-gallery figcaption {
-    font-size: 0.9em;
-    color: #555;
+.trip-table-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.trip-table-section h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+.trip-table-section table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.trip-table-section th, td {
+    padding: 15px;
+    border: 1px solid var(--primary-color);
+}
+
+.trip-table-section thead {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.contact-cta {
+    text-align: center;
+    padding: 50px;
 }
 
 /* Footer styling */
@@ -184,28 +254,37 @@ footer {
     background-color: var(--primary-color);
     color: white;
     padding: 1.5rem;
-    display: flex; /* Use flexbox for the footer content */
-    justify-content: space-between; /* Pushes content to ends */
-    align-items: center; /* Vertically align items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer p {
-    margin: 0; /* Remove default paragraph margin */
+    margin: 0;
     padding: 0;
-    flex-grow: 1; /* Allow copyright text to take available space */
-    text-align: left; /* Align copyright to the left */
+    flex-grow: 1;
+    text-align: left;
 }
 
-.socialmedia {
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+.socialmedia { /* Added from new CSS, changed class to social for consistency */
     display: flex;
     gap: 15px;
 }
 
 .socialmedia a {
-    text-decoration: none; /* Remove underline from social media image links */
+    text-decoration: none;
 }
 
 .socialmedia img {
-    width: 30px; /* Adjust social media icon size */
+    width: 30px;
     height: auto;
 }
